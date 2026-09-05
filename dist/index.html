@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Samadhan Setu — a prototype platform connecting citizen challenges with universities and local authorities." />
+  <title>Samadhan Setu | Citizen Innovation Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-view="citizen-home" aria-label="Samadhan Setu home">
+        <span class="brand-mark">स</span>
+        <span><strong>Samadhan</strong><small>SETU</small></span>
+      </a>
+      <div class="role-switcher">
+        <span>DEMO ROLE</span>
+        <button class="role-button" id="roleButton" aria-expanded="false">
+          <span class="avatar" id="roleAvatar">AK</span>
+          <span><strong id="roleName">Aarav Kumar</strong><small id="roleType">Citizen</small></span>
+          <b>⌄</b>
+        </button>
+        <div class="role-menu" id="roleMenu">
+          <button data-role="citizen"><span class="mini-avatar blue">AK</span><span><strong>Aarav Kumar</strong><small>Citizen</small></span></button>
+          <button data-role="admin"><span class="mini-avatar purple">DM</span><span><strong>District Moderator</strong><small>Admin</small></span></button>
+          <button data-role="university"><span class="mini-avatar orange">TC</span><span><strong>Tech University</strong><small>University</small></span></button>
+        </div>
+      </div>
+      <nav id="nav"></nav>
+      <div class="sidebar-note">
+        <span>SIH 2026 PROTOTYPE</span>
+        <strong>Team Nexus</strong>
+        <small>Interactive demo • Sample data</small>
+      </div>
+    </aside>
+
+    <main>
+      <canvas id="civicCanvas" aria-hidden="true"></canvas>
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <div><span class="eyebrow" id="pageEyebrow">CITIZEN PORTAL</span><h1 id="pageTitle">Good morning, Aarav</h1></div>
+        <div class="top-actions"><button class="icon-button" aria-label="Notifications">♢<i></i></button><button class="outline-button" data-action="report">+ Report a challenge</button></div>
+      </header>
+      <div class="content" id="content"></div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+  <script src="app.js"></script>
+  <script src="three-scene.js"></script>
+</body>
+</html>
